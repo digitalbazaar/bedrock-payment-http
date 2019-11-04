@@ -1,0 +1,35 @@
+{
+  "name": "bedrock-payment-http",
+  "version": "0.0.1",
+  "description": "HTTP APIs for bedrock-payment.",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalbazaar/bedrock-payment-http.git"
+  },
+  "keywords": [
+    "HTTPS",
+    "API",
+    "Payment",
+    "Bedrock",
+    "Express",
+    "Javascript"
+  ],
+  "author": "DigitalBazaar",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/bedrock-payment-http/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/bedrock-payment-http#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-digitalbazaar": "^2.0.1",
+    "eslint-plugin-jsdoc": "^17.1.0"
+  }
+}
