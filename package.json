@@ -31,5 +31,12 @@
     "eslint": "^6.6.0",
     "eslint-config-digitalbazaar": "^2.0.1",
     "eslint-plugin-jsdoc": "^17.1.0"
+  },
+  "peerDependencies": {
+    "bedrock": "^2.0.0",
+    "bedrock-payment": "0.0.1",
+    "bedrock-passport": "^5.0.0",
+    "bedrock-validation": "^4.1.0",
+    "express-async-handler": "^1.1.4"
   }
 }
