@@ -21,7 +21,11 @@
     "Express",
     "Javascript"
   ],
-  "author": "DigitalBazaar",
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "https://digitalbazaar.com"
+  },
   "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/digitalbazaar/bedrock-payment-http/issues"
