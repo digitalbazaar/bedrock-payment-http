@@ -19,6 +19,23 @@
 npm install bedrock-payment-http --save
 ```
 
+## Configure
+You can configure bedrock-payment-http by requiring a config file like this
+
+```js
+const bedrock = require('bedrock');
+const path = require('path');
+
+const {config} = bedrock;
+const cfg = config['payment-http'];
+
+const basePath = '/payment';
+
+cfg.routes = {
+  basePath
+};
+```
+
 ## Author
 
 👤 **Digital Bazaar, Inc.**
