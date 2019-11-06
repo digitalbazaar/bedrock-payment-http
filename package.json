@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digitalbazaar/bedrock-payment-http.git"
+    "url": "https://github.com/digitalbazaar/bedrock-payment-http.git"
   },
   "keywords": [
     "HTTPS",
@@ -37,9 +37,7 @@
   },
   "peerDependencies": {
     "bedrock": "^2.0.0",
-    "bedrock-payment": "0.0.1",
-    "bedrock-passport": "^5.0.0",
-    "bedrock-validation": "^4.1.0",
-    "express-async-handler": "^1.1.4"
+    "bedrock-express": "^2.1.2",
+    "bedrock-payment": "0.0.1"
   }
 }
