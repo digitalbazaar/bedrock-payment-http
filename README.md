@@ -1,17 +1,26 @@
-<h1 align="center">Welcome to bedrock-payment-http 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/digitalbazaar/bedrock-payment-http#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/digitalbazaar/bedrock-payment-http/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
-  </a>
-</p>
+# bedrock-payment-http
 
-> HTTP APIs for bedrock-payment.
 
-### 🏠 [Homepage](https://github.com/digitalbazaar/bedrock-payment-http#readme)
+> Provides the HTTP APIs for bedrock-payment.
+
+TODO: Fill out this long description.
+
+## Table of Contents
+
+- [Security](#security)
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+- [API](#api)
+- [Maintainers](#maintainers)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Security
+Bedrock Payment HTTP provides API endpoints for payments that require a user is logged in. Additional checks are made to ensure that the payment being processed was created by the account in the current session.
+
+## Background
+Bedrock Payment HTTP was created in order to provide an easy to use and secure API for payments from multiple payment gateways (i.e. paypal, stripe, etc.).
 
 ## Install
 
@@ -19,7 +28,7 @@
 npm install bedrock-payment-http --save
 ```
 
-## Configure
+## Usage
 You can configure bedrock-payment-http by requiring a config file like this
 
 ```js
@@ -36,19 +45,59 @@ cfg.routes = {
 };
 ```
 
-## Author
+## API
+This module adds several new API endpoints to your bedrock server.
+the basePath defaults to /payment
 
-👤 **Digital Bazaar, Inc.**
+### GET /payment/credentials?service=foo
 
-* Github: [@digitalbazaar](https://github.com/digitalbazaar)
+Gets the credentials needed for client side charges.
 
-## 🤝 Contributing
+  * Response codes:
+     * 200: Credentials were found.
+     * 404: Credentials not found.
+     * 500: Server failure.
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/digitalbazaar/bedrock-payment-http/issues).
 
-## Show your support
+### GET /payment
 
-Give a ⭐️ if this project helped you!
+Gets all payments for the currently logged in account.
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+  * Response codes:
+     * 200: Request succeeded.
+     * 500: Server failure.
+
+### POST /payment
+
+Creates or updates a pending payment.
+
+  * Response codes:
+     * 200 Payment Update Request succeeded.
+     * 201 Payment Create Request succeeded.
+     * 404 Payment not found.
+     * 500 Server failure.
+
+### PUT /payment/:paymentID
+
+Processes a Payment.
+
+  * Response codes:
+    * 200 Payment Process succeeded.
+    * 404 Payment not found.
+    * 500 Server failure.
+
+## Maintainers
+
+[@DigitalBazaar](https://github.com/DigitalBazaar)
+
+## Contributing
+
+See [the Bedrock contributing file](https://github.com/digitalbazaar/bedrock/blob/master/CONTRIBUTING.md)!
+
+PRs accepted.
+
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+## License
+
+Bedrock © 2019 DigitalBazaar
