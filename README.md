@@ -3,7 +3,7 @@
 
 > Provides the HTTP APIs for bedrock-payment.
 
-TODO: Fill out this long description.
+Inserts a set of API endpoints into a bedrock server that can securely process payments.
 
 ## Table of Contents
 
