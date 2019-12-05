@@ -1,0 +1,10 @@
+*.sw[nop]
+*~
+.cache
+.project
+.settings
+*.log
+TAGS
+coverage
+node_modules
+reports
